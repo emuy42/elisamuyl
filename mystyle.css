@@ -1,0 +1,23 @@
+body {
+    margin-left: 20px;
+  }
+
+  div {
+    column-count: 2;
+  }
+
+  h1 {
+    column-span: all;
+  }
+  
+  img {
+    column-span: all;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
