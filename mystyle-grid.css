@@ -1,0 +1,119 @@
+/* The grid container */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Style the grid elemnts */
+.header {
+    grid-area: header;
+    text-align: left;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'image image image image'
+        'about about work work'
+        'footer footer footer footer';
+    }
+
+.image {
+    grid-area: image;
+    padding: 0px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3.5/1;
+}
+
+@media (max-width: 600px) {
+    img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1.5/1;
+        
+    }
+}
+
+.about,
+.work {
+    padding: 10px;
+  }
+  
+.about {
+    grid-area: about;
+  }
+  
+.work {
+    grid-area: work;
+  }
+  
+  /* Style the footer */
+.footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Responsive layout - makes the rwo columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header'
+        'image image image image'
+        'about about about about'
+        'work work work work'
+        'footer footer footer footer';    
+    }
+  }
+
+
+
+  /*
+
+    .item1 {
+        grid-area: 1 / 1 / 1 / 2
+        grid-area: header;
+      }
+    
+    .item2 {
+        grid-area: 2 / 2 / 1 / 2;
+        grid-area: img;
+      }
+    
+    .item3 {
+        grid-area: 3 / 3 / 1 / 1;
+        grid-area: about;
+      }
+    
+    .item4 {
+        grid-area: 3 / 3 / 2 / 2;
+        grid-area: work;
+      }
+    
+    .item5 {
+        grid-area: 4 / 4 / 1 / 2;
+        grid-area: footer;
+      }
+
+
+      .img-box {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: calc(100% * (100 / 300));
+    }
+    .img-cropped-calc {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }

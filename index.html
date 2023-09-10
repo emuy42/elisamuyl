@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="mystyle.css">    <!--Style-->
+        <link rel="stylesheet" href="mystyle-grid.css">    <!--Style-->
 
         <title>
             elisamuyl
@@ -10,20 +10,19 @@
 
     <body>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <div class="row">    <!-- Row for Headline-->  
-            <h1>  <!--Headline -->
-            <font size = "10" face= "Impact">
-            Elisa Muyl </font>
-        </h1>
-        </div>
-        
-        <div class="row">   <!-- Row for image-->
-            <img src = "images/ny-harbor.jpeg" width="800px"> <!-- My own images-->
-        </div>
+    
+        <div class="grid-container">     <!-- Grid container-->  
+            <div class="header"> <!--Headline-->
+                <h1> <font size = "10" face= "Impact">
+                    Elisa Muyl </font>
+                </h1>
+            </div>
 
-        <div class="row"> <!--New row for the "About" and "Work" columns--> 
-            <div class="col-6"> <!--About-->
+            <div class="image"> <!--Image-->
+                <img src = "images/ny-harbor.jpeg" height="400px"> <!-- My own images-->
+            </div>
+
+            <div class="about"> <!--About-->
                 <h2>   <!--About header-->
                     <font size = "6"  face= "Impact">
                     About</font>
@@ -42,34 +41,40 @@
                                     target="_blank">Craig Newmark Graduate School of Journalism</a>.
                     </font>
                 </p>
-            </div> <!-- 50% -->
+            </div>
 
-            <div class="col-6">  <!--Work-->
+            <div class="work"> <!--Work-->
                 <h2>  <!--Work section-->
-                        <font size = "6" face= "Impact">
-                        Work</font>
+                    <font size = "6" face= "Impact">
+                    Work</font>
                 </h2>
                 <ul> <!--Work list -->
-                        <font size = "4"  face= "Helvetica">
-                            <li><a href="https://drive.google.com/file/d/1qk0pHyPuO75hGUL5mjnAbQkAWBPWGJ2s/view?usp=share_link" 
-                                target="_blank">Aggregated Losses, Concentrated Pain</a>, unpublished, March 2023</li>
-                            <li><a href="https://drive.google.com/file/d/1G2Z8UF_5fmD9zZn5Henk4PS08moaRzYa/view?usp=share_link" 
-                                target="_blank">Consuming New York</a>, unpublished, February 2023</li>
-                            <li><a href="https://www.mcgilltribune.com/news/what-happened-when-mcgill-loaned-arthur-porter-500000/" 
-                                target="_blank">What happened when McGill loaned Arther Porter $500,000?</a>, The Tribune, 2013</li>
-                            <li><a href="https://www.mcgilltribune.com/news/quebec-elects-pq-minority-government/" 
-                                target="_blank">Quebec elects PQ minority government</a>, The Tribune, 2012</li>
-                            <li><a href="https://www.mcgilltribune.com/opinion/why-i-remember/" 
-                                target="_blank">Why I remember</a>, The Tribune, 2012</li>
-                            <li><a href="https://www.mcgilltribune.com/news/news-analysis-the-riot-in-perspective-2/" 
-                                target="_blank">New analysis: the riot in perspective</a>,The Tribune, 2011</li>
-                            <li><a href="https://www.mcgilltribune.com/news/riot-police-at-mcgill/" 
-                                target="_blank">Riot police at McGill</a>, The Tribune, 2011</li>
-                            <li><a href="https://www.mcgilltribune.com/features/law-school-in-canada-vs-usa/" 
-                                target="_blank">Law school in Canada v. USA</a>, The Tribune, 2011</li>
-                            </font>
+                    <font size = "4"  face= "Helvetica">
+                        <li><a href="https://drive.google.com/file/d/1qk0pHyPuO75hGUL5mjnAbQkAWBPWGJ2s/view?usp=share_link" 
+                            target="_blank">Aggregated Losses, Concentrated Pain</a>, unpublished, March 2023</li>
+                        <li><a href="https://drive.google.com/file/d/1G2Z8UF_5fmD9zZn5Henk4PS08moaRzYa/view?usp=share_link" 
+                            target="_blank">Consuming New York</a>, unpublished, February 2023</li>
+                        <li><a href="https://www.mcgilltribune.com/news/what-happened-when-mcgill-loaned-arthur-porter-500000/" 
+                            target="_blank">What happened when McGill loaned Arther Porter $500,000?</a>, The Tribune, 2013</li>
+                        <li><a href="https://www.mcgilltribune.com/news/quebec-elects-pq-minority-government/" 
+                            target="_blank">Quebec elects PQ minority government</a>, The Tribune, 2012</li>
+                        <li><a href="https://www.mcgilltribune.com/opinion/why-i-remember/" 
+                            target="_blank">Why I remember</a>, The Tribune, 2012</li>
+                        <li><a href="https://www.mcgilltribune.com/news/news-analysis-the-riot-in-perspective-2/" 
+                            target="_blank">New analysis: the riot in perspective</a>,The Tribune, 2011</li>
+                        <li><a href="https://www.mcgilltribune.com/news/riot-police-at-mcgill/" 
+                            target="_blank">Riot police at McGill</a>, The Tribune, 2011</li>
+                        <li><a href="https://www.mcgilltribune.com/features/law-school-in-canada-vs-usa/" 
+                            target="_blank">Law school in Canada v. USA</a>, The Tribune, 2011</li>
+                        </font>
                 </ul>
-            </div> <!-- 50% -->
+            </div>
+            
+            <div class="footer"> <!--Links-->
+                <font size = "3" face= "Impact"> <p><a href="https://www.linkedin.com/in/elisa-muyl-b55a362a/" 
+                target="_blank">LinkedIn</a></p></font>
+            </div>
+            
         </div>
 
     </body>
@@ -79,9 +84,10 @@
 
 <!--
 To do: 
-1. Add Grid Layout
-2. Have image horizonallt cropped in full screen: https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css
-3. Center image
+1. Add Grid Layout - done
+2. Add grid layout to html - done
+3. Have image horizonally cropped in full screen: https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css - done
+4. Center image - done
 
 
 
